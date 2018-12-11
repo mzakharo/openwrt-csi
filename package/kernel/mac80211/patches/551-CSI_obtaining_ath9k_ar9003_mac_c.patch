@@ -1,0 +1,43 @@
+--- a/drivers/net/wireless/ath/ath9k/ar9003_mac.c
++++ b/drivers/net/wireless/ath/ath9k/ar9003_mac.c
+@@ -17,7 +17,7 @@
+ #include "hw.h"
+ #include "ar9003_mac.h"
+ #include "ar9003_mci.h"
+-
++#include "ar9003_csi.h"
+ static void ar9003_hw_rx_enable(struct ath_hw *hw)
+ {
+ 	REG_WRITE(hw, AR_CR, 0);
+@@ -483,6 +505,9 @@
+ 	struct ar9003_rxs *rxsp = (struct ar9003_rxs *) buf_addr;
+ 	unsigned int phyerr;
+ 
++    void *data_addr;
++    u_int16_t data_len;
++
+ 	if ((rxsp->status11 & AR_RxDone) == 0)
+ 		return -EINPROGRESS;
+ 
+@@ -581,6 +606,21 @@
+ 	if (rxsp->status11 & AR_KeyMiss)
+ 		rxs->rs_status |= ATH9K_RXERR_KEYMISS;
+ 
++    data_len = rxs->rs_datalen;
++    data_addr = buf_addr + 48;
++
++    if (rxsp->status11 & AR_CRCErr){
++        if (rxs->rs_rate >= 0x80){
++            csi_record_payload(data_addr,data_len);
++            csi_record_status(ah,rxs,rxsp,data_addr);
++        }
++    }else{
++        if  (rxs->rs_more == 1)
++            csi_record_payload(data_addr,data_len);
++
++        if (rxs->rs_rate >= 0x80)
++            csi_record_status(ah,rxs,rxsp,data_addr);
++    }
+ 	return 0;
+ }
+ EXPORT_SYMBOL(ath9k_hw_process_rxdesc_edma);
