@@ -1,0 +1,20 @@
+Taret system:
+   AR7xxx
+
+Target proifle:
+   TL-WDR4300 v1
+
+menuconfig:
+   luci
+   recvCSI
+   iputils-ping
+
+
+local startup:
+
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+recv_csi | logger -t csi &
+sleep 10
+ping -i0.1 192.168.3.1 > /dev/null &
+exit 0
