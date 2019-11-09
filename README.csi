@@ -16,5 +16,16 @@ local startup:
 # the system init finished. By default this file does nothing.
 recv_csi | logger -t csi &
 sleep 10
-ping -i0.1 192.168.3.1 > /dev/null &
+ping  -s0 -i0.1 192.168.3.1 > /dev/null &
 exit 0
+
+
+http://192.168.2.1/cgi-bin/luci/admin/network/firewall/rules
+
+Traffic-Rules
+    TCP: 6969, 80, 22
+
+192.168.2.1 ->  Breath client, 'breath' hostname on wwan' -> host for recvCSI
+
+192.168.3.1 -> Breath server
+
