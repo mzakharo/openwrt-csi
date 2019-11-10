@@ -35,7 +35,7 @@
 
 #include "csi_fun.h"
 
-#define BUFSIZE 4096
+#define BUFSIZE (2800 * 4)
 
 int quit;
 unsigned char buf_addr[BUFSIZE];
