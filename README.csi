@@ -47,7 +47,9 @@ Traffic-Rules
 
 Driver development:
 /home/mz/dev/openwrt-csi/build_dir/target-mips_24kc_musl/linux-ar71xx_generic/backports-2017-11-01/drivers/net/wireless/ath/ath9k
-cp ath9k_hw.ko ar9003_csi.ko ath9k.ko root@192.168.2.1:/tmp
+scp ath9k_hw.ko ar9003_csi.ko ath9k.ko root@192.168.2.1:/tmp
+
+make  V=s package/kernel/mac80211/compile
 
 On 192.168.2.1, run:
 ./install_ko.sh

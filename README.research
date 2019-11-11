@@ -1,0 +1,77 @@
+https://github.com/seemoo-lab/nexmon_csi
+
+
+Paper repository
+https://dhalperi.github.io/linux-80211n-csitool/
+
+Phase error correction
+https://www.researchgate.net/publication/322512659_p-Splicer_Perceiving_Accurate_CSI_Phases_with_Commodity_WiFi_Devices
+
+residual CFO
+https://ieeexplore.ieee.org/document/8798719
+
+Calibrating phase offsets:
+https://ieeexplore.ieee.org/document/8676032
+
+Sleep monitoring paper: technique comparison
+http://www.eng.auburn.edu/~szm0001/papers/sleep-monitoring_chapter.pdf
+
+Can We Monitor Breathing During Sleep via Wi-Fi on Smartphone? nexus sleep May 2019:
+https://arxiv.org/pdf/1905.02411.pdf
+
+SleepGuardian 2019: -> eh
+https://arxiv.org/abs/1908.06171v1
+
+breathTrack 2019 -> little detail:
+https://ieeexplore.ieee.org/document/8612907
+https://zhangdh24.github.io/pub/BreathTrack_GC.pdf
+
+Breathing and Heartrate WIFI 2018:
+https://ieeexplore.ieee.org/document/8319181
+
+FullBreathe 2018:
+https://www.researchgate.net/publication/327758396_FullBreathe_Full_Human_Respiration_Detection_Exploiting_Complementarity_of_CSI_Phase_and_Amplitude_of_WiFi_Signals
+
+Sleepy 2018:
+https://ieeexplore.ieee.org/document/8376954
+https://ieeexplore.ieee.org/document/8399492
+
+Multi-person sleep Oct 2018 -. Fresnel zones, simple explanation:
+https://ieeexplore.ieee.org/document/8567539
+https://www.researchgate.net/publication/329117012_Multi-Person_Sleeping_Respiration_Monitoring_with_COTS_WiFi_Devices
+
+CardioPhi 2018 -> cant find PDF:
+https://dl.acm.org/citation.cfm?doid=3286978.3287003
+
+PhaseBeat 2017 Root-MUSIC, MIMO phase analysis:
+https://ieeexplore.ieee.org/document/7980063
+
+TensorBeat 2017 -> not bad:
+https://arxiv.org/abs/1702.02046v1
+
+
+Hand gesture recognition
+https://dx.doi.org/10.1109/ACCESS.2018.2814575
+
+multi person tracking
+https://web.ece.ucsb.edu/~belalkorany/Papers/IPSN19_KaranamKoranyMostofi.pdf
+
+Eucledian multi-track
+http://www.cs.trinity.edu/~stan/pdf/multitrack.pdf
+
+
+Fall detection
+http://hdl.handle.net/2429/65593
+https://dx.doi.org/10.1109/IAEAC.2017.8054245
+
+FalldePhi
+http://www.davidrojas.co.uk/wp-content/uploads/2017/10/falldefi_ubiquitous_fall_detection_wifi.pdf
+
+Human Fall
+http://cs229.stanford.edu/proj2016/report/NaruiDayalDeligiannis-HumanFallDetectionUsingWiFi-report.pdf
+
+Wifall: Device-free fall detection by wireless networks. IEEE Trans. Mob. Comput.
+2017, 16, 581–594. [CrossRef]
+
+RT-Fall: A Real-Time and Contactless Fall Detection
+System with Commodity WiFi Devices. IEEE Trans. Mob. Comput. 2017, 16, 511–526

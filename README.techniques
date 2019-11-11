@@ -1,0 +1,24 @@
+- https://www.researchgate.net/publication/329117012_Multi-Person_Sleeping_Respiration_Monitoring_with_COTS_WiFi_Devices
+
+ -  1) Respiration Rate Estimation: Since raw CSI measure-
+ments contain many signal noises, we apply the Hampel [14]
+and wavelet filter [15] on the CSI series to remove outliers and
+high-frequency noises. Next, the respiration rate is estimated
+by performing the Fast Fourier Transformation (FFT) on all the
+CSI streams. Within the range [0.1Hz, 0.6Hz] of respiration
+rate, the highest peak of the summation of all the FFT result
+
+o eliminate the frequency leakage on respiration
+rate estimation, we add a hamming window on each CSI
+stream, and apply the method mentioned in [16]
+
+
+
+- Can We Monitor Breathing During Sleep via Wi-Fi on Smartphone? nexus sleep May 2019:
+https://arxiv.org/pdf/1905.02411.pdf
+
+1) obtaining magnitude of CSI values;
+2) removing outliers by the Hampel identifier [11], [18] with a window of 1 s and a threshold of 1.7;
+3) low-pass filtering by a moving average filter with a window of 1.5 s;
+4) 60Hz re- sampling frequency
+5) band-pass filtering by the 4th order Butterworth filter with cut-off frequencies of 0.2 Hz and 0.4 Hz
